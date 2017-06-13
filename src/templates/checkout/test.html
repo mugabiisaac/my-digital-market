@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+    Csrfmiddlewaretoken: "{{ csrf_token }}",
+<script>
+$(document).ready(function(){
+    {% block jquery %}
+    $("#test-call").click(function(event){
+        event.preventDefault();
+    //    $("#content").html("hello there")
+        s.ajax({
+            method: "POST",
+            url: "{% url 'test' %}",
+            data: {
+                testData: "hello new data",
+
+            },
+            success: function(data, textStatus, jqXHR){
+                console.log(data.works)
+                if (data.works) {
+                    $("#content").html(data.time)
+                }
+            //    console.log(textStatus)
+            //    console.log(jqXHR)
+            },
+            error: function(jqXHR, textstatus, errorThrown){
+                console.log(errorThrown)
+                console.log(textStatus)
+                console.log(jqXHR)
+            }
+
+        })
+    })
+
+    {% endblock jquery %}
+})
+</script>
+
+
+{% block content %}
+
+<a id='test-call' href='#'>Test Ajax</a>
+
+<div id='content'></div>
+
+{% endblock %}

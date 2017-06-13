@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block style %}
+
+{% endblock style %}
+
+{% block content %}
+<div class='col-primary pull-left'>
+<h1>Tags</h1>
+
+
+{% for instance in object_list %}
+    <p><a href='{{ instance.get_absolute_url }}'>{{ instance.title }}</a>
+      ({{ instance.products.count }}
+      product{% if instance.products.count > 1 %}s{% endif %})</p>
+{% empty %}
+    <p>No Tag Yet.</p>
+{% endfor %}
+
+</div>
+{% endblock %}

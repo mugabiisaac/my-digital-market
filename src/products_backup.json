@@ -1,0 +1,96 @@
+[
+{
+    "fields": {
+        "description": "Good Good Father",
+        "title": "Sharma",
+        "media": "sharma/sharma_CXbZNiI.jpg",
+        "price": "9.99",
+        "seller": 23,
+        "sale_active": false,
+        "sale_price": "6.99",
+        "slug": "sharma"
+    },
+    "model": "products.product",
+    "pk": 1
+},
+{
+    "fields": {
+        "description": "great great great",
+        "title": "soccer",
+        "media": "soccer/manchester.jpg",
+        "price": "9.99",
+        "seller": 23,
+        "sale_active": false,
+        "sale_price": "6.99",
+        "slug": "soccer"
+    },
+    "model": "products.product",
+    "pk": 2
+},
+{
+    "fields": {
+        "width": "500",
+        "product": 1,
+        "media": "sharma/sharma_CXbZNiI.jpg",
+        "type": "hd",
+        "height": "281"
+    },
+    "model": "products.thumbnail",
+    "pk": 1
+},
+{
+    "fields": {
+        "width": "350",
+        "product": 1,
+        "media": "sharma/sharma_CXbZNiI_CiXb2j4.jpg",
+        "type": "sd",
+        "height": "196"
+    },
+    "model": "products.thumbnail",
+    "pk": 2
+},
+{
+    "fields": {
+        "width": "150",
+        "product": 1,
+        "media": "sharma/sharma_CXbZNiI_RSDYWBy.jpg",
+        "type": "micro",
+        "height": "84"
+    },
+    "model": "products.thumbnail",
+    "pk": 3
+},
+{
+    "fields": {
+        "width": "500",
+        "product": 2,
+        "media": "soccer/manchester.jpg",
+        "type": "hd",
+        "height": "314"
+    },
+    "model": "products.thumbnail",
+    "pk": 4
+},
+{
+    "fields": {
+        "width": "350",
+        "product": 2,
+        "media": "soccer/manchester_QvVIflh.jpg",
+        "type": "sd",
+        "height": "220"
+    },
+    "model": "products.thumbnail",
+    "pk": 5
+},
+{
+    "fields": {
+        "width": "150",
+        "product": 2,
+        "media": "soccer/manchester_TZ0Jbhm.jpg",
+        "type": "micro",
+        "height": "94"
+    },
+    "model": "products.thumbnail",
+    "pk": 6
+}
+]

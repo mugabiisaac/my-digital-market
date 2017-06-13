@@ -1,0 +1,105 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel='stylesheet' href='{% static "css/base.css" %}' />
+<style>
+
+.main-content {
+    width: 800px;
+    margin: 0 auto;
+    clear: both;
+}
+
+.main-nav {
+    width: 640px;
+    margin: 0 auto;
+}
+
+.main-nav l1 {
+        display: inline;
+}
+
+.first-nav {
+    padding-left: 0;
+    margin-left: -75px;
+}
+
+.pull-right {
+    float: right;
+
+}
+
+.pull-left {
+    float: left;
+}
+
+.col-primary {
+    width: 100%;
+}
+
+.col-sidebar {
+    padding-top: 2px;
+    width: 35%;
+    margin-top: -700px;
+    margin-right: -60px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+#purchase-btn {
+    color: red;
+}
+
+button.buy-btn {
+        border: 1px solid #DA5B00 !important;
+        background: #DA5B00 !important;
+}
+
+button.buy-btn .ui-button-text {
+        color: #ffffff;
+}
+
+.ui-widget-header {
+        border: 1px solid #ffffff !important;
+        background: #ffffff !important;
+}
+{% block style %} {% endblock style %}
+</style>
+</head>
+<body>
+<nav class='main-nav'>
+    <ul class="pull-left first-nav">
+        <a href='{% url "dashboard" %}'>Digital Marketplace</a>
+    </ul>
+    <ul class="pull-right">
+        <a href='{% url "products:list" %}'>Products</a>
+        <a href='{% url "tags:list" %}'>Tags</a>
+        <a href='{% url "library" %}'>Library</a>
+    </ul>
+</nav>
+<div class="main-content">
+{% block content %}
+<p>This is awesome</p>
+{% endblock %}
+
+</div>
+
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
+<script src='{% static "js/django.csrf.js" %}'></script>
+
+<script>
+$(document).ready(function(){
+        {% block jquery %}
+
+        {% endblock jquery %}
+})
+</script>
+</body>
+</html>
